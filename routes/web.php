@@ -7,6 +7,7 @@ Route::get('/login', function () {
     return "Silakan login terlebih dahulu.";
 })->name('login');
 
+
 // Route untuk login otomatis sebagai Admin (untuk keperluan testing/screenshot cepat)
 Route::get('/login-admin', function () {
     $user = \App\Models\User::where('role', 'admin')->first();
